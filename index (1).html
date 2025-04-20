@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Typewriter</title>
+  <style>
+    /* CSS yahan hogi */
+  </style>
+  <title>Meri Pehli Website</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #1e90ff;
+    }
+
+    p {
+      font-size: 18px;
+      color: #1f799e;
+    }
+
+class="e"{
+  font-size; 20px;
+  color: #6e701f;
+}
+    img {
+      border-radius: 100px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 20px;
+    }
+    button {
+  background-color: #8e44ad; /* purple */
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}#42445A
+class="0"{
+  background-color:#1C2AC3; /* blue */
+  color:rgba(20, 40, 100, 1);
+  padding: 12px 24px;
+}
+  </style>
+  <style>
+  #typing {
+    font-size: 36px;
+    color: #1e90ff;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #1e90ff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+</style>
+<style>
+  .block {
+    background-color: #D89999;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    transition: transform 0.3s;
+  }
+
+  .block:hover {
+    transform: scale(1.05);
+  }
+</style>
+<style>
+  .block-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+  }
+</style>
+<style>
+  .btn {
+    margin-top: 10px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #00bfff;
+  }
+</style>
+</head>
+<body>
+  <button id="toggle-mode">Toggle Mode</button>
+    <div><button onclick="window.location.href='about.html'">Next Page</button></div>
+    
+  <div><h1 id="typing">Welcome to My Website</h1></div>
+  
+  <h2>HELLO VISITORS</h2>
+  
+    <p class="f" style="color: hotpink;">
+   welcome to this website
+  </p>
+  
+  <p class="e">
+   Main ek beginner web developer hoon aur yah meri pahli multi-page website hai.<br>
+  Mujhe nayi chijen sikhana aur banana pasand hai
+  </p class="e">
+  
+  <div class="block">
+  <h3>💻 Web Developmen<h3>
+  <p>Main HTML, CSS aur JavaScript ka use karke websites banata hoon.</p>
+</div>
+  
+  
+
+  
+  <div class="block">
+  <img src="IMG20250418193042.jpg" alt="My Image" height="400" width="300" class="block-img">
+  <button class="btn">Read More</button>
+</div>
+
+    <script src="script.js"></script>
+    <script>
+  const text = "👋 Welcome to My Website!";
+  let i = 0;
+  let forward = true;
+  const speed = 150; // typing/erasing speed
+  const delayAfterTyping = 1000;
+  const delayAfterDeleting = 500;
+
+  function typeEffect() {
+    const heading = document.getElementById("typing");
+
+    if (forward) {
+      heading.innerText = text.substring(0, i++);
+      if (i > text.length) {
+        forward = false;
+        setTimeout(typeEffect, delayAfterTyping);
+        return;
+      }
+    } else {
+      heading.innerText = text.substring(0, i--);
+      if (i < 0) {
+        forward = true;
+        setTimeout(typeEffect, delayAfterDeleting);
+        return;
+      }
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+</script>
+</body>
+</html>

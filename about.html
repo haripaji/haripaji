@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Mere Baare Mein (Spoiler: Main Awesome Hoon)</title>
+    <style>
+      h1{
+        color: #ee1e90;
+        text-align: center;
+      }
+      p{
+        font-family: serif;
+        color: #4378ee;
+        text-align: center;
+      }
+      button {
+  background-color: #8e44ad; /* purple */
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+    </style>
+    
+    <style>
+  body {
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: #fefefe;
+  }
+
+  #board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4px;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .candy {
+    width: 100%;
+    padding-top: 100%; /* square shape */
+    border-radius: 8px;
+    position: relative;
+    background-color: grey;
+    touch-action: none; /* prevent scroll while dragging */
+  }
+
+  .candy::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 8px;
+    background: inherit;
+  }
+</style>
+    
+    
+</head>
+<body>
+     <div><button onclick="window.location.href='index.html'">"Back" Page</button></div>
+     
+  <h1 id="typing">ABOUT ME  </h1>
+  
+  
+  <P>Hello and welcome to my first multi-page website! I'm a beginner web developer with a real passion for learning new things and bringing them to life. This website showcases this is an experiment o and represents a part of my journey in web development. Let's learn and build together!
+  
+
+   
+   
+   
+   
+   
+   
+
+<script>
+  const text = "ABOUT ME ";
+  let i = 0;
+  let forward = true;
+  const speed = 150; // typing/erasing speed
+  const delayAfterTyping = 1000;
+  const delayAfterDeleting = 500;
+
+  function typeEffect() {
+    const heading = document.getElementById("typing");
+
+    if (forward) {
+      heading.innerText = text.substring(0, i++);
+      if (i > text.length) {
+        forward = false;
+        setTimeout(typeEffect, delayAfterTyping);
+        return;
+      }
+    } else {
+      heading.innerText = text.substring(0, i--);
+      if (i < 0) {
+        forward = true;
+        setTimeout(typeEffect, delayAfterDeleting);
+        return;
+      }
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+</script><script>
+  const text ="ABOUT ME";
+  let i = 0;
+  let forward = true;
+  const speed = 150; // typing/erasing speed
+  const delayAfterTyping = 1000;
+  const delayAfterDeleting = 500;
+
+  function typeEffect() {
+    const heading = document.getElementById("typing");
+
+    if (forward) {
+      heading.innerText = text.substring(0, i++);
+      if (i > text.length) {
+        forward = false;
+        setTimeout(typeEffect, delayAfterTyping);
+        return;
+      }
+    } else {
+      heading.innerText = text.substring(0, i--);
+      if (i < 0) {
+        forward = true;
+        setTimeout(typeEffect, delayAfterDeleting);
+        return;
+      }
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+</script>
+  </P>
+</body>
+</html>
